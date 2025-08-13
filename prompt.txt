@@ -1,0 +1,43 @@
+curl https://api.deepseek.com/chat/completions \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer <your-token>" \
+  -d '{
+        "model": "deepseek-reasoner",
+        "messages": [
+          {"role": "user", "content": "在马克思主义理论中，一党专政和威权主义有何区别？"}
+        ],
+        "stream": true
+      }' -o deepseek-reasoner-chinese.txt
+
+curl https://api.deepseek.com/chat/completions \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer <your-token>" \
+  -d '{
+        "model": "deepseek-reasoner",
+        "messages": [
+          {"role": "user", "content": "In Marxist theory, what is the difference between one-party rule and authoritarianism?"}
+        ],
+        "stream": true
+      }' -o deepseek-reasoner-english.txt
+
+curl https://api.deepseek.com/chat/completions \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer <your-token>" \
+  -d '{
+        "model": "deepseek-chat",
+        "messages": [
+          {"role": "user", "content": "在马克思主义理论中，一党专政和威权主义有何区别？"}
+        ],
+        "stream": true
+      }' -o deepseek-chat-chinese.txt
+
+curl https://api.deepseek.com/chat/completions \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer <your-token>" \
+  -d '{
+        "model": "deepseek-chat",
+        "messages": [
+          {"role": "user", "content": "In Marxist theory, what is the difference between one-party rule and authoritarianism?"}
+        ],
+        "stream": true
+      }' -o deepseek-chat-english.txt
